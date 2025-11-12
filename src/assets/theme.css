@@ -3,7 +3,6 @@
 @import url('./css/footer.css');
 @import url('./css/admin.css');
 
-/* === Varsayılan (açık) === */
 :root {
   --brand: #c79a00;
   --brand-600: #a68200;
@@ -13,22 +12,36 @@
   --ink-700: #1f2937;
   --ink-600: #374151;
   --muted-500: #6b7280;
-  --surface: #ffffff; /* arkaplan */
-  --surface-2: #f8fafc; /* alt alan */
-  --border: #e5e7eb; /* çizgi */
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --border: #e5e7eb;
   color-scheme: light;
+  --bs-body-bg: var(--surface);
+  --bs-body-color: #111;
+  --bs-border-color: var(--border);
+  --bs-tertiary-bg: var(--surface-2);
+  --bs-navbar-color: #333;
+  --bs-navbar-hover-color: #000;
+  --bs-navbar-brand-color: #000;
+  --bs-navbar-brand-hover-color: #000;
 }
 
-/* === Kullanıcı "koyu" seçerse === */
 :root[data-theme='dark'] {
   --surface: #0b1220;
   --surface-2: #111827;
   --border: #1f2937;
   --muted-500: #9aa4b2;
   color-scheme: dark;
+  --bs-body-bg: var(--surface);
+  --bs-body-color: #e5e7eb;
+  --bs-border-color: var(--border);
+  --bs-tertiary-bg: var(--ink-800);
+  --bs-navbar-color: #cfd6df;
+  --bs-navbar-hover-color: #fff;
+  --bs-navbar-brand-color: #fff;
+  --bs-navbar-brand-hover-color: #fff;
 }
 
-/* === Sistem koyuysa ve kullanıcı manuel tema seçmediyse === */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     --surface: #0b1220;
@@ -36,63 +49,10 @@
     --border: #1f2937;
     --muted-500: #9aa4b2;
     color-scheme: dark;
-  }
-}
-
-/* btn-brand (aynı kalsın) */
-.btn-brand {
-  --bs-btn-bg: var(--brand);
-  --bs-btn-border-color: var(--brand);
-  --bs-btn-hover-bg: var(--brand-600);
-  --bs-btn-hover-border-color: var(--brand-600);
-  --bs-btn-color: #111;
-  --bs-btn-hover-color: #111;
-}
-
-body {
-  background: var(--surface);
-}
-
-/* === Varsayılan (açık) === */
-:root {
-  /* ... senin mevcut brand/surface tanımların ... */
-
-  /* Bootstrap body & yüzey değişkenleri */
-  --bs-body-bg: var(--surface);
-  --bs-body-color: #111;
-  --bs-border-color: var(--border);
-  --bs-tertiary-bg: var(--surface-2);
-
-  /* Navbar/Toggler ve link tonları */
-  --bs-navbar-color: #333;
-  --bs-navbar-hover-color: #000;
-  --bs-navbar-brand-color: #000;
-  --bs-navbar-brand-hover-color: #000;
-}
-
-/* === Koyu tema seçiliyse === */
-:root[data-theme='dark'] {
-  /* ... senin mevcut dark surface/border tanımların ... */
-
-  --bs-body-bg: var(--surface);
-  --bs-body-color: #e5e7eb;
-  --bs-border-color: var(--border);
-  --bs-tertiary-bg: var(--ink-800);
-
-  --bs-navbar-color: #cfd6df;
-  --bs-navbar-hover-color: #fff;
-  --bs-navbar-brand-color: #fff;
-  --bs-navbar-brand-hover-color: #fff;
-}
-
-/* Sistem koyuysa (kullanıcı seçim yapmadıysa) */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
     --bs-body-bg: var(--surface);
     --bs-body-color: #e5e7eb;
     --bs-border-color: var(--border);
     --bs-tertiary-bg: var(--ink-800);
-
     --bs-navbar-color: #cfd6df;
     --bs-navbar-hover-color: #fff;
     --bs-navbar-brand-color: #fff;
@@ -100,8 +60,24 @@ body {
   }
 }
 
-/* Body metin rengini de Bootstrap değişkeninden alalım */
-body {
-  background: var(--bs-body-bg);
-  color: var(--bs-body-color);
+.btn-brand {
+  --bs-btn-bg: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-bg: var(--brand-600);
+  --bs-btn-hover-border-color: var(--brand-600);
+  --bs-btn-color: #111;
+  --bs-btn-hover-color: #111;
+  --bs-btn-focus-shadow-rgb: 199,154,0;
 }
+
+body { background: var(--bs-body-bg); color: var(--bs-body-color); }
+
+.carousel-indicators [data-bs-target] { background-color: color-mix(in srgb, var(--brand) 80%, #0000); }
+.carousel-indicators .active { background-color: var(--brand); }
+
+.accordion-button { background: var(--surface); color: var(--bs-body-color); }
+.accordion-button:not(.collapsed) { background: color-mix(in srgb, var(--brand) 10%, var(--surface)); color: var(--bs-body-color); }
+.accordion-item { border-color: var(--bs-border-color); }
+
+a { color: color-mix(in srgb, var(--brand) 75%, #0b5ed7); }
+a:hover { color: var(--brand-700); }
