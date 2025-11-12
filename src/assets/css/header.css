@@ -1,0 +1,78 @@
+/* ===================== Header ===================== */
+/* HeaderBar.vue: <nav class="gp-header navbar ..."> */
+.gp-header {
+  /* Sayfa ile aynı arka plan; griye düşmesin */
+  background: var(--surface) !important;
+  border-bottom: 1px solid var(--bs-border-color);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* Marka */
+.gp-header .navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--bs-navbar-brand-color, inherit);
+  text-decoration: none;
+}
+.gp-header .navbar-brand:hover {
+  color: var(--bs-navbar-brand-hover-color, currentColor);
+  text-decoration: none;
+}
+
+/* Linkler */
+.gp-header .nav-link {
+  color: var(--bs-navbar-color, inherit);
+  opacity: 0.9;
+  transition:
+    opacity 0.15s ease,
+    color 0.15s ease;
+}
+.gp-header .nav-link:hover {
+  color: var(--bs-navbar-hover-color, currentColor);
+  opacity: 1;
+  text-decoration: none;
+}
+
+/* Aktif rota (Vue Router) */
+.gp-header .nav-link.router-link-active,
+.gp-header .nav-link.active {
+  color: var(--bs-navbar-hover-color, currentColor);
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* Toggler (buton + ikon) */
+.gp-header .navbar-toggler {
+  border-color: var(--bs-border-color);
+}
+.gp-header .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.15rem rgba(0, 0, 0, 0.08);
+}
+html[data-bs-theme='dark'] .gp-header .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.12);
+}
+
+/* Bootstrap 5.3 ikon (SVG bg) — temaya göre invert */
+.gp-header .navbar-toggler .navbar-toggler-icon {
+  filter: invert(0);
+}
+html[data-bs-theme='dark'] .gp-header .navbar-toggler .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Küçük ekran menü iç boşlukları */
+@media (max-width: 991.98px) {
+  .gp-header .navbar-collapse {
+    padding-top: 0.5rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+/* (İsteğe bağlı) Hafif cam/blur etkisi için aktif et:
+.gp-header{
+  backdrop-filter: saturate(1.2) blur(8px);
+  background: color-mix(in oklab, var(--surface) 85%, transparent);
+}
+*/

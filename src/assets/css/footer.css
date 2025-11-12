@@ -1,0 +1,28 @@
+/* ===================== Footer ===================== */
+.gp-footer {
+  background: var(--bs-tertiary-bg);
+  border-top: 1px solid var(--bs-border-color);
+  color: var(--muted-500);
+}
+
+.gp-footer a {
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 600;
+}
+.gp-footer a:hover {
+  color: var(--brand-600);
+  text-decoration: underline;
+}
+
+/* Koyu temada yüzeyi biraz daha koyulaştır, metin kontrastını artır */
+html[data-bs-theme='dark'] .gp-footer {
+  background: var(--ink-800);
+  color: #cfd6df;
+}
+html[data-bs-theme='dark'] .gp-footer a {
+  color: var(--brand);
+}
+html[data-bs-theme='dark'] .gp-footer a:hover {
+  color: var(--brand-600);
+}
