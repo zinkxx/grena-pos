@@ -105,44 +105,38 @@ Bu sayfaların hepsi `meta.requiresAuth = true` ile korunur ve router guard `use
 
 Kısa açıklama: Ürünün öne çıkan faydalarını anlattığın hero, CTA butonları ve modül kartları.
 
-### 2. Giriş Ekranı
-
-![Giriş Ekranı](/public/screenshots/02-login.png)
-
-Kısa açıklama: Salon sahipleri ve yetkili personel için login sayfası.
-
-### 3. Adisyon & POS
+### 2. Adisyon & POS
 
 ![Adisyon & POS](/public/screenshots/03-pos.png)
 
 Kısa açıklama: Hizmet ve ürün satışı, ödeme alma ekranı.
 
-### 4. Randevu Takvimi
+### 3. Randevu Takvimi
 
 ![Randevu Takvimi](/public/screenshots/04-appointments.png)
 
 Kısa açıklama: Gün / hafta / ay görünüm senaryolarına uygun randevu ekranı.
 
-### 5. Admin Login
+### 4. Admin Login
 
 ![Admin Login](/public/screenshots/05-admin-login.png)
 
 Kısa açıklama: Yönetici giriş ekraın.
 
-### 6. Employee Login
+### 5. Employee Login
 
 ![Admin Login](/public/screenshots/08-employee-login.png)
 
 Kısa açıklama: Personel giriş ekraın.
 
-### 7. Admin Dashboard
+### 6. Admin Dashboard
 
-![Admin Dashboard](/public/screenshots/05-admin-dashboard-demo.png)
+![Admin Dashboard](/public/screenshots/06-admin-dashboard-demo.png)
 
 Kısa açıklama: Müşteri, randevu, gelir-gider ve personel modüllerine giriş ekranı.
 
 ### 7. Admin Dashboard
 
-![Admin Dashboard](/public/screenshots/05-admin-dashboard-widget.png)
+![Admin Dashboard](/public/screenshots/07-admin-dashboard-widget.png)
 
 Kısa açıklama: Müşteri, randevu, gelir-gider ve personel modüllerine giriş ekranı içerisinde seçilebilir ve özelleştirilebilir widget.
