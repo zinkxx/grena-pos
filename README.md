@@ -123,8 +123,26 @@ Kısa açıklama: Hizmet ve ürün satışı, ödeme alma ekranı.
 
 Kısa açıklama: Gün / hafta / ay görünüm senaryolarına uygun randevu ekranı.
 
-### 5. Admin Dashboard
+### 5. Admin Login
 
-![Admin Dashboard](/public/screenshots/05-admin-dashboard.png)
+![Admin Login](/public/screenshots/05-admin-login.png)
+
+Kısa açıklama: Yönetici giriş ekraın.
+
+### 6. Employee Login
+
+![Admin Login](/public/screenshots/08-employee-login.png)
+
+Kısa açıklama: Personel giriş ekraın.
+
+### 7. Admin Dashboard
+
+![Admin Dashboard](/public/screenshots/05-admin-dashboard-demo.png)
 
 Kısa açıklama: Müşteri, randevu, gelir-gider ve personel modüllerine giriş ekranı.
+
+### 7. Admin Dashboard
+
+![Admin Dashboard](/public/screenshots/05-admin-dashboard-widget.png)
+
+Kısa açıklama: Müşteri, randevu, gelir-gider ve personel modüllerine giriş ekranı içerisinde seçilebilir ve özelleştirilebilir widget.

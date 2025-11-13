@@ -6,8 +6,24 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     // Genel sayfalar
-    { path: '/', name: 'home', component: () => import('@/views/Home.vue'), meta: { title: 'Anasayfa' } },
-    { path: '/login', name: 'login', component: () => import('@/views/Login.vue'), meta: { title: 'Giriş' } },
+    {
+      path: '/',
+      name: 'home',
+      component: () => import('@/views/Home.vue'),
+      meta: { title: 'Anasayfa' },
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('@/views/Login.vue'),
+      meta: { title: 'Giriş' },
+    },
+    {
+      path: '/forgot-password',
+      name: 'forgot-password',
+      component: () => import('@/views/ForgotPassword.vue'),
+      meta: { title: 'Şifremi Unuttum' },
+    },
 
     // Çözümler (yeni)
     {
@@ -71,10 +87,11 @@ const router = createRouter({
           component: () => import('@/views/admin/Staff.vue'),
           meta: { title: 'Yönetim • Personel' },
         },
+        // DİKKAT: forgot-password BURADA DEĞİL ARTIK
       ],
     },
 
-    // Opsiyonel: 404
+    // 404
     {
       path: '/:pathMatch(.*)*',
       name: 'not-found',
@@ -83,13 +100,12 @@ const router = createRouter({
     },
   ],
 
-  // Sayfa değişiminde yukarı kaydır
   scrollBehavior() {
     return { top: 0 }
   },
 })
 
-// Basit guard (admin koruması)
+// Guard
 router.beforeEach(async (to) => {
   const auth = useAuth()
   if (to.meta.requiresAuth && !auth.user) {
@@ -100,7 +116,6 @@ router.beforeEach(async (to) => {
   }
 })
 
-// Dinamik başlık
 router.afterEach((to) => {
   const base = 'Grena POS'
   const t = (to.meta?.title as string) || ''
