@@ -125,6 +125,6 @@ Kısa açıklama: Gün / hafta / ay görünüm senaryolarına uygun randevu ekra
 
 ### 5. Admin Dashboard
 
-![Admin Dashboard](/screenshots/05-admin-dashboard.png)
+![Admin Dashboard](/public/screenshots/05-admin-dashboard.png)
 
 Kısa açıklama: Müşteri, randevu, gelir-gider ve personel modüllerine giriş ekranı.
