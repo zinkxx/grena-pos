@@ -101,25 +101,25 @@ Bu sayfaların hepsi `meta.requiresAuth = true` ile korunur ve router guard `use
 
 ### 1. Ana Sayfa (Hero)
 
-![Ana Sayfa – Hero](/screenshots/01-home-hero.png)
+![Ana Sayfa – Hero](/public/screenshots/01-home-hero.png)
 
 Kısa açıklama: Ürünün öne çıkan faydalarını anlattığın hero, CTA butonları ve modül kartları.
 
 ### 2. Giriş Ekranı
 
-![Giriş Ekranı](/screenshots/02-login.png)
+![Giriş Ekranı](/public/screenshots/02-login.png)
 
 Kısa açıklama: Salon sahipleri ve yetkili personel için login sayfası.
 
 ### 3. Adisyon & POS
 
-![Adisyon & POS](/screenshots/03-pos.png)
+![Adisyon & POS](/public/screenshots/03-pos.png)
 
 Kısa açıklama: Hizmet ve ürün satışı, ödeme alma ekranı.
 
 ### 4. Randevu Takvimi
 
-![Randevu Takvimi](/screenshots/04-appointments.png)
+![Randevu Takvimi](/public/screenshots/04-appointments.png)
 
 Kısa açıklama: Gün / hafta / ay görünüm senaryolarına uygun randevu ekranı.
 
